@@ -1,0 +1,13 @@
+<div class="Container">
+    <div class="Titulo">
+        Borrar Segun Punto
+    </div>
+    <div class="TodosPuntos">
+        <label for="Puntos">Puntos:</label>
+        <select name="Puntos" id="Puntos" (change)="changePunto($event.target.value)">
+            <option *ngFor="let punto of puntos" value="{{punto.id}}">{{punto.nombre}}</option>
+        </select>
+    </div>
+    <input class="Btn" type="button" value="Borrar" (click)="borrarSegunPuntos()">
+    <h5>Se borraran todos los hospedajes del punto selecionado</h5>
+</div>

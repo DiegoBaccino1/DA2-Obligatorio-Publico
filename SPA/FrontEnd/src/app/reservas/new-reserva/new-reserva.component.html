@@ -1,0 +1,10 @@
+<div class="Container">
+    <div class="Valores">
+        <input [(ngModel)]="nombreTurista" type="text" value="" placeholder="Nombre del turista">
+        <input [(ngModel)]="apellidoTurista" type="text" value="" placeholder="Apellido del turista">
+        <input [(ngModel)]="mailTurista" type="text" value="" placeholder="mail del turista">
+    </div>
+    <div>
+        <input class="Btn" type="button" value="Reservar" (click)=reservar()>
+    </div>
+</div>

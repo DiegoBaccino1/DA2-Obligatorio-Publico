@@ -1,0 +1,27 @@
+<div class="Container">
+    <div class="Nombre">
+        Id:{{reserva.id}}
+    </div>
+    <div class="DescripcionYFechas">
+        Descripcion:
+        <br>
+        {{reserva.descripcion}}
+        <br>
+        CheckIn: {{reserva.checkIn}}
+        CheckOut {{reserva.checkOut}}
+    </div>
+    <div class="DatosTurista">
+        <h3>Datos del turista</h3>
+        Cantidad:{{reserva.cantidadHuespedes}}
+        <br>
+        Nombre:{{reserva.nombreTurista}}
+        <br>
+        Apellido:{{reserva.apellidoTurista}}
+    </div>
+    <div class="Estado">
+        <h3>Estado:{{reserva.estado}}</h3>
+    </div>
+    <div class="Hospedaje">
+        {{reserva.hospedaje.nombreHospedaje}}
+    </div>
+</div>

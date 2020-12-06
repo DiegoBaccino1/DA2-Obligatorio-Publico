@@ -1,0 +1,26 @@
+.Container {
+    width: 280px;
+    height: 100%;
+    position: relative;
+    text-align: center;
+    margin-left: 30%;
+}
+.Titulo{
+    border-bottom:6px solid ;
+    font-size: 40px;
+    margin-bottom: 50px;
+    padding-bottom: 13px;
+
+}
+.Btn{
+    background: none;
+    width: 100%;
+    padding-top: 2px;
+    letter-spacing: 2px;
+    box-shadow:0px 0px 5px rgba(0, 0, 0, 0.575);
+}
+.Textbox{
+    font-size: 20px;
+    padding:8px 0;
+    margin:8px 0;
+}

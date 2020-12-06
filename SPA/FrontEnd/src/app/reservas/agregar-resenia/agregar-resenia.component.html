@@ -1,0 +1,14 @@
+<div class="Container">
+    <div>
+        <h1>Reseña: {{reserva.hospedaje.nombreHospedaje}}</h1>
+    </div>
+    <div class="Resenia">
+        <label for="resenia">Ingrese la reseña: </label>
+        <input  [(ngModel)]="resenia" id="resenia" type="text" placeholder="Ingrese la reseña" required="true">
+    </div>
+    <div class="Puntaje">
+        <label for="PuntajeInput">Ingrese puntaje: </label>
+        <input class="Btn" type="number" id="PuntajeInput" min="1" max="5" [(ngModel)]="puntaje" placeholder="Puntaje">
+    </div>
+    <input  class="Btn" type="button" value="Agregar Reseña" (click)="ingresarResenia()">
+</div>

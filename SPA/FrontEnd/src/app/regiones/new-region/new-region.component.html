@@ -1,0 +1,12 @@
+<div class="Container">
+    <div class="Titulo">
+        Nueva Region
+    </div>
+    <div class="Textbox">
+        <div>Nombre:</div> 
+        <input [(ngModel)]="nombreRegion" type="text" placeholder="Ingrese el nombre" required="true">
+    </div>
+    <div>
+        <input type="button" name="btnAgregar" value="Agregar" class="Btn" (click)="crear()">
+    </div>
+</div>

@@ -1,0 +1,22 @@
+.Container{
+    text-align: center;
+    min-width: 240px;
+    max-width: 900px;
+    width: 100%;
+    box-shadow: 5px 10px 10px rgba(128, 128, 128, 0.637);
+    border:3px white;
+    border-radius: 4px;
+}
+.Categorias{
+    float: right;
+    width: 20%;
+    height: 50%;
+    border: 2px solid;
+    background-color: rgba(142, 165, 42, 0.473);
+    font-size: 18px;
+    font-weight: 600;
+}
+.Categorias li{
+    margin-top: 5px;
+    text-decoration: underline blue;
+}

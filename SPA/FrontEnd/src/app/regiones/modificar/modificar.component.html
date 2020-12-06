@@ -1,0 +1,14 @@
+<div class="Container">
+    <div class="ValoresAntiguos">
+        <div>
+            Nombre antiguo: {{region.nombre}}
+        </div>
+    </div>
+    <div class="NuevosValores">
+        <div class="NuevoInputs">
+            Nuevo nombre: 
+            <input [(ngModel)]="nuevoNombre" type="text" placeholder="Ingrese el nombre" required="true">
+        </div>
+    </div>
+    <input type="button" class="Btn" value="Modificar" (click)="modificar()">
+</div>

@@ -1,0 +1,25 @@
+<div class="Container">
+    <div class="FiltroDatos">
+        <div class="Huespuedes">
+            <input [(ngModel)]="cantAdultos" type="number" name="CantAdultos" id="CantAdultos" placeholder="CantAdultos" min="0" required="true">
+            <input [(ngModel)]="cantNinios" type="number" name="CantNinios" id="CantNinios" placeholder="CantNiños" min="0" required="true">
+            <input [(ngModel)]="cantBebes" type="number" name="CantBebes" id="CantBebes" placeholder="CantBebes" min="0" required="true">
+            <input [(ngModel)]="cantJubilados" type="number" name="CantJubilados" id="CantJubilados" placeholder="CantJubilados" min="0" required="true">
+        </div>
+        <div class="Fechas">
+            <input [(ngModel)]="checkIn" type="date" name="CheckIn" id="CheckIn" max="{{fechaMax}}" >
+            <input [(ngModel)]="checkOut" type="date" name="CheckOut" id="CheckOut" max="{{fechaMax}}" >
+            
+            <select name="Puntos" id="Puntos" (change)="changePunto($event.target.value)">
+                <option *ngFor="let punto of puntos" value="{{punto.id}}">{{punto.nombre}}</option>
+            </select>
+        </div>
+        <input type="button" value="Filtrar" (click)="buscar()">
+    </div>
+    <div class="HospedajesFiltrados">
+        <span *ngFor="let hospedaje of hospedajes">
+            {{hospedaje.nombreHospedaje}}
+            <input class="Btn" type="button" value="Reservar" (click)="reservar(hospedaje.id)">
+        </span>
+    </div>
+</div>

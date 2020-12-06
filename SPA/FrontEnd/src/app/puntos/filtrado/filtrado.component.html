@@ -1,0 +1,24 @@
+<div class="Container">
+    <div class="DatosFiltro">
+        <span>
+            <select name="Regiones" id="Regiones" (change)="changeRegion($event.target.value)">
+                <option *ngFor="let region of regiones" value="{{region.id}}">{{region.nombre}}</option>
+            </select>
+        </span>
+        <span>
+            <select name="Categorias" id="Categorias" multiple="true" (change)="changeCategoria($event.target.value)">
+            <option *ngFor="let categoria of categorias" value="{{categoria.id}}">{{categoria.nombre}}</option>                
+            </select>
+        </span>
+        <div>
+            <input type="button" name="BtnFiltro" id="BtnFiltro" value="Filtrar" (click)="filtrar()">
+        </div>
+    </div>
+    <div class="PuntosFiltrados">
+        <ul>
+            <li *ngFor="let punto of puntos">
+                {{punto.nombre}}
+            </li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+.Container{
+    margin-top: 2%;
+    text-align: center;
+}
+.Valores input{
+    display: block;
+    margin-left: 30%;
+    margin-top: 8px;
+    padding: 15px;
+}
+.Btn{
+    width: 20%;
+    background: none;
+    border: 1px solid;
+    margin-top: 3%;
+    font-size: large;
+    font-weight: 600;
+}

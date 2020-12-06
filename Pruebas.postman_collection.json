@@ -1,0 +1,1592 @@
+{
+	"info": {
+		"_postman_id": "f63811a7-3064-426e-b916-48c4b2b22a99",
+		"name": "Pruebas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Pruebas_Region",
+			"item": [
+				{
+					"name": "POST Region",
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Nombre\": \"Este\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44323/regiones",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44323",
+							"path": [
+								"regiones"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET GetAll",
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44323/regiones",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44323",
+							"path": [
+								"regiones"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET GetById",
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44323/regiones/5",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44323",
+							"path": [
+								"regiones",
+								"5"
+							]
+						},
+						"description": "Obtiene segun el id"
+					},
+					"response": []
+				},
+				{
+					"name": "PUT PutRegion",
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Nombre\":\"Metropolitana\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44323/regiones/6",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44323",
+							"path": [
+								"regiones",
+								"6"
+							]
+						},
+						"description": "Modifica el nombre"
+					},
+					"response": []
+				},
+				{
+					"name": "PUT AsociarPunto",
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44323/regiones/6/puntos/10",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44323",
+							"path": [
+								"regiones",
+								"6",
+								"puntos",
+								"10"
+							]
+						},
+						"description": "Agrega el punto de {puntoId} a la region de {regionId}"
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Delete{Id}",
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44323/regiones/6",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44323",
+							"path": [
+								"regiones",
+								"6"
+							]
+						},
+						"description": "Borra la region de Id"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Pruebas_PuntoTuristico",
+			"item": [
+				{
+					"name": "Pruebas_CursoNormal",
+					"item": [
+						{
+							"name": "POST CursoNormal",
+							"protocolProfileBehavior": {
+								"strictSSL": false
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Nombre\":\"La Paloma\",\r\n    \"Descripcion\":\"Alguna descripcion valida\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44323/puntos",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44323",
+									"path": [
+										"puntos"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PUT CursoNormal",
+							"protocolProfileBehavior": {
+								"strictSSL": false
+							},
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Nombre\":\"Nuevo nombre\",\r\n    \"Descripcion\":\"Otra desripcion valida\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44323/puntos/10",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44323",
+									"path": [
+										"puntos",
+										"10"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PUT AsociarCategoria",
+							"protocolProfileBehavior": {
+								"strictSSL": false
+							},
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:44323/puntos/10/categorias/5",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44323",
+									"path": [
+										"puntos",
+										"10",
+										"categorias",
+										"5"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GET CursoNormal",
+							"protocolProfileBehavior": {
+								"strictSSL": false
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:44323/puntos/11",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44323",
+									"path": [
+										"puntos",
+										"11"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DELETE CursoNormal",
+							"protocolProfileBehavior": {
+								"strictSSL": false
+							},
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:44323/puntos/12",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44323",
+									"path": [
+										"puntos",
+										"12"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GETAll CursoNormal",
+							"protocolProfileBehavior": {
+								"strictSSL": false
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:44323/puntos",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44323",
+									"path": [
+										"puntos"
+									]
+								},
+								"description": "GetAll()"
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Pruebas_Categoria",
+			"item": [
+				{
+					"name": "POST CursoNormal",
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Nombre\":\"Playa\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44323/categorias",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44323",
+							"path": [
+								"categorias"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GETALL CursoNormal",
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44323/categorias/",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44323",
+							"path": [
+								"categorias",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET CursoNormal",
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44323/categorias/5",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44323",
+							"path": [
+								"categorias",
+								"5"
+							]
+						},
+						"description": "PorID\r\n"
+					},
+					"response": []
+				},
+				{
+					"name": "PUT CursoNormal",
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Nombre\":\"Nuevo Nombre\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44323/categorias/5",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44323",
+							"path": [
+								"categorias",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE CursoNormal",
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44323/categorias/5",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44323",
+							"path": [
+								"categorias",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Pruebas_Hospedaje",
+			"item": [
+				{
+					"name": "Pruebas_BuscarHospedaje",
+					"item": [
+						{
+							"name": "BuscarHospedaje CursoNormal",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true,
+								"strictSSL": false
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"CantAdultos\":\"2\",\r\n    \"CantNinios\":\"1\",\r\n    \"CantBebes\":\"2\",\r\n    \"CheckIn\":\"2020,10,9\",\r\n    \"CheckOut\":\"2020,10,10\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44323/hospedajes/puntos/10",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44323",
+									"path": [
+										"hospedajes",
+										"puntos",
+										"10"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "BuscarHospedaje CursoAlternativo-1",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true,
+								"strictSSL": false
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"CantAdultos\":\"2\",\r\n    \"CantNinios\":\"2\",\r\n    \"CantBebes\":\"2\",\r\n    \"CheckIn\":\"2020,10,9\",\r\n    \"CheckOut\":\"2020,10,10\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44323/hospedajes/puntos/10",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44323",
+									"path": [
+										"hospedajes",
+										"puntos",
+										"10"
+									]
+								},
+								"description": "Sobrepasa la capacidad del hospedaje"
+							},
+							"response": []
+						},
+						{
+							"name": "BuscarHospedaje CursoAlternativo-2",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true,
+								"strictSSL": false
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"CantAdultos\":\"2\",\r\n    \"CantNinios\":\"0\",\r\n    \"CantBebes\":\"2\",\r\n    \"CheckIn\":\"2020,10,11\",\r\n    \"CheckOut\":\"2020,10,10\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44323/hospedajes/puntos/10",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44323",
+									"path": [
+										"hospedajes",
+										"puntos",
+										"10"
+									]
+								},
+								"description": "CheckIn>CheckOut"
+							},
+							"response": []
+						},
+						{
+							"name": "BuscarHospedaje CursoAlternativo-3",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true,
+								"strictSSL": false
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44323/hospedajes/puntos/10",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44323",
+									"path": [
+										"hospedajes",
+										"puntos",
+										"10"
+									]
+								},
+								"description": "Filtro es null"
+							},
+							"response": []
+						},
+						{
+							"name": "BuscarHospedaje CursoAlrenativo-4",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true,
+								"strictSSL": false
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"CantAdultos\":\"2\",\r\n    \"CantBebes\":\"2\",\r\n    \"CheckIn\":\"2020,10,9\",\r\n    \"CheckOut\":\"2020,10,10\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44323/hospedajes/puntos/10",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44323",
+									"path": [
+										"hospedajes",
+										"puntos",
+										"10"
+									]
+								},
+								"description": "Una de las Cantidades [de un tipo turista] no seteada"
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Pruebas_ModificarCapacidad",
+					"item": [
+						{
+							"name": "ModificarCapacidad CursoNormal",
+							"protocolProfileBehavior": {
+								"strictSSL": false
+							},
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:44323/hospedajes/2/capacidad?nuevaCapacidad=9",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44323",
+									"path": [
+										"hospedajes",
+										"2",
+										"capacidad"
+									],
+									"query": [
+										{
+											"key": "nuevaCapacidad",
+											"value": "9"
+										}
+									]
+								},
+								"description": "Dado un id de hospedaje se cambia su capacidad, si es mayor a 0 (la del parametro)"
+							},
+							"response": []
+						},
+						{
+							"name": "ModificarCapacidad CursoAlternativo-1",
+							"protocolProfileBehavior": {
+								"strictSSL": false
+							},
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:44323/hospedajes/5/capacidad?nuevaCapacidad=4",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44323",
+									"path": [
+										"hospedajes",
+										"5",
+										"capacidad"
+									],
+									"query": [
+										{
+											"key": "nuevaCapacidad",
+											"value": "4"
+										}
+									]
+								},
+								"description": "El hospedaje no existe"
+							},
+							"response": []
+						},
+						{
+							"name": "ModificarCapacidad  CursoAlternativo-2",
+							"protocolProfileBehavior": {
+								"strictSSL": false
+							},
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:44323/hospedajes/2/capacidad?nuevaCapacidad=-1",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44323",
+									"path": [
+										"hospedajes",
+										"2",
+										"capacidad"
+									],
+									"query": [
+										{
+											"key": "nuevaCapacidad",
+											"value": "-1"
+										}
+									]
+								},
+								"description": "nuevaCapacidad<0"
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Pruebas_Asociar Hospedaje Con Punto Existente",
+					"item": [
+						{
+							"name": "AsociarHospedajeConPuntoExistente CursoNormal",
+							"protocolProfileBehavior": {
+								"strictSSL": false
+							},
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:44323/hospedajes/2/puntos/10",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44323",
+									"path": [
+										"hospedajes",
+										"2",
+										"puntos",
+										"10"
+									]
+								},
+								"description": "Punto y Hospedaje Existen"
+							},
+							"response": []
+						},
+						{
+							"name": "AsociarHospedajeConPuntoExistente CursoAlternativo-1",
+							"protocolProfileBehavior": {
+								"strictSSL": false
+							},
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:44323/hospedajes/4/puntos/10",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44323",
+									"path": [
+										"hospedajes",
+										"4",
+										"puntos",
+										"10"
+									]
+								},
+								"description": "Hospedaje no existe"
+							},
+							"response": []
+						},
+						{
+							"name": "AsociarHospedajeSinPuntoExistente CursoAlternativo-2",
+							"protocolProfileBehavior": {
+								"strictSSL": false
+							},
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:44323/hospedajes/2/puntos/15",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44323",
+									"path": [
+										"hospedajes",
+										"2",
+										"puntos",
+										"15"
+									]
+								},
+								"description": "Punto no existe"
+							},
+							"response": []
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "48083950-3f62-4e31-8550-90e43f34e957",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "e71b6f0a-2018-4147-9e5d-2d8391610cf5",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Pruebas_BorrarHospedajesDePunto",
+					"item": [
+						{
+							"name": "BorrarHospedajesDePunto CursoNormal",
+							"protocolProfileBehavior": {
+								"strictSSL": false
+							},
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:44323/hospedajes/puntos/11",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44323",
+									"path": [
+										"hospedajes",
+										"puntos",
+										"11"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "BorrarHospedajesDePunto CursoAlternativo",
+							"protocolProfileBehavior": {
+								"strictSSL": false
+							},
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:44323/hospedajes/puntos/15",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44323",
+									"path": [
+										"hospedajes",
+										"puntos",
+										"15"
+									]
+								},
+								"description": "Hospedaje no existe"
+							},
+							"response": []
+						},
+						{
+							"name": "BorrarHospedajeDePunto CursoAlternativo-2",
+							"protocolProfileBehavior": {
+								"strictSSL": false
+							},
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:44323/hospedajes/puntos/10",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44323",
+									"path": [
+										"hospedajes",
+										"puntos",
+										"10"
+									]
+								},
+								"description": "No se eliminan las dependecias antes"
+							},
+							"response": []
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "4a7c1ed6-430d-470e-bcd4-b2dddd536fde",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "ca45e6f2-0483-48cf-9eb8-cbc9602cf628",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "POST CursoNormal",
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"NombreHospedaje\":\"Hotel X\",\r\n    \"Descripcion\":\"1 baño\",\r\n    \"Direccion\":\"Garibaldi 1589\",\r\n    \"CantidadEstrellas\":4,\r\n    \"PrecioPorNoche\":140,\r\n    \"PrecioTotalPeriodo\":0,\r\n    \"Capacidad\":5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44323/hospedajes",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44323",
+							"path": [
+								"hospedajes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GETALL CursoNormal ",
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44323/hospedajes",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44323",
+							"path": [
+								"hospedajes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET CursoNormal",
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44323/hospedajes/2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44323",
+							"path": [
+								"hospedajes",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Filtro CursoNormal",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true,
+						"strictSSL": false
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"filtro\":\r\n    {\r\n        \"CantAdultos\":\"2\",\r\n        \"CantNinios\":\"1\",\r\n        \"CantBebes\":\"2\",\r\n        \"CheckIn\":\"2020,10,9\",\r\n        \"CheckOut\":\"2020,10,10\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44323/hospedajes",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44323",
+							"path": [
+								"hospedajes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE CursoNormal",
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44323/hospedajes/2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44323",
+							"path": [
+								"hospedajes",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT CursoNormal Generico",
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"NombreHospedaje\":\"Nuevo Nombre\",\r\n    \"Descripcion\":\"Otra desc\",\r\n    \"Direccion\":\"Garibaldi 2020\",\r\n    \"CantidadEstrellas\":2,\r\n    \"PrecioPorNoche\":70,\r\n    \"PrecioTotalPeriodo\":0,\r\n    \"Capacidad\":6,\r\n    \"Ocupado\":false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44323/hospedajes/2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44323",
+							"path": [
+								"hospedajes",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Pruebas_Reserva",
+			"item": [
+				{
+					"name": "Pruebas_CambiarEstado",
+					"item": [
+						{
+							"name": "CambiarEstado CursoNormal",
+							"protocolProfileBehavior": {
+								"strictSSL": false
+							},
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:44323/reservas/1?descripcion=prueba&estado=Aceptada",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44323",
+									"path": [
+										"reservas",
+										"1"
+									],
+									"query": [
+										{
+											"key": "descripcion",
+											"value": "prueba"
+										},
+										{
+											"key": "estado",
+											"value": "Aceptada"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CambiarEstado CursoAlternativo-1",
+							"protocolProfileBehavior": {
+								"strictSSL": false
+							},
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:44323/reservas/1?descripcion=&estado=Creada",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44323",
+									"path": [
+										"reservas",
+										"1"
+									],
+									"query": [
+										{
+											"key": "descripcion",
+											"value": ""
+										},
+										{
+											"key": "estado",
+											"value": "Creada"
+										}
+									]
+								},
+								"description": "Descripcion null"
+							},
+							"response": []
+						},
+						{
+							"name": "CambiarEstado CursoAlternativo-2",
+							"protocolProfileBehavior": {
+								"strictSSL": false
+							},
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:44323/reservas/10?descripcion=prueba&estado=Creada",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44323",
+									"path": [
+										"reservas",
+										"10"
+									],
+									"query": [
+										{
+											"key": "descripcion",
+											"value": "prueba"
+										},
+										{
+											"key": "estado",
+											"value": "Creada"
+										}
+									]
+								},
+								"description": "La reserva no existe"
+							},
+							"response": []
+						},
+						{
+							"name": "CambiarEstado CursoAlternativo-3",
+							"protocolProfileBehavior": {
+								"strictSSL": false
+							},
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:44323/reservas/1?descripcion=prueba&estado=Recien Creada",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44323",
+									"path": [
+										"reservas",
+										"1"
+									],
+									"query": [
+										{
+											"key": "descripcion",
+											"value": "prueba"
+										},
+										{
+											"key": "estado",
+											"value": "Recien Creada"
+										}
+									]
+								},
+								"description": "Estado no valido"
+							},
+							"response": []
+						},
+						{
+							"name": "CambiarEstado CursoAlternativo-4",
+							"protocolProfileBehavior": {
+								"strictSSL": false
+							},
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "https://localhost:44323/reservas/1?descripcion=prueba&estado=",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44323",
+									"path": [
+										"reservas",
+										"1"
+									],
+									"query": [
+										{
+											"key": "descripcion",
+											"value": "prueba"
+										},
+										{
+											"key": "estado",
+											"value": ""
+										}
+									]
+								},
+								"description": "Estado=null"
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Prueba_PostReserva",
+					"item": [
+						{
+							"name": "POST Reserva CursoNormal",
+							"protocolProfileBehavior": {
+								"strictSSL": false
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Datos\":{\"Nombre\":\"Juan\",\"Apellido\":\"Perez\",\"Mail\":\"Nose\"},\r\n    \"Filtro\":\r\n    {\r\n        \"CantAdultos\":\"2\",\r\n        \"CantNinios\":\"1\",\r\n        \"CantBebes\":\"2\",\r\n        \"CheckIn\":\"2020,10,9\",\r\n        \"CheckOut\":\"2020,10,10\"\r\n    },\r\n    \"HospedajeId\":\"2\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44323/reservas",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44323",
+									"path": [
+										"reservas"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "POST Reserva CursoAlternativo-1",
+							"protocolProfileBehavior": {
+								"strictSSL": false
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Datos\":{\"Nombre\":\"Juan\",\"Apellido\":\"Perez\",\"Mail\":\"Nose\"},\r\n    \"Filtro\":null,\r\n    \"HospedajeId\":\"2\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44323/reservas",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44323",
+									"path": [
+										"reservas"
+									]
+								},
+								"description": "Filtro null"
+							},
+							"response": []
+						},
+						{
+							"name": "POST Reserva CursoAlternativo-2",
+							"protocolProfileBehavior": {
+								"strictSSL": false
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Datos\":null,\r\n    \"Filtro\":\r\n    {\r\n        \"CantAdultos\":\"2\",\r\n        \"CantNinios\":\"1\",\r\n        \"CantBebes\":\"2\",\r\n        \"CheckIn\":\"2020,10,9\",\r\n        \"CheckOut\":\"2020,10,10\"\r\n    },\r\n    \"HospedajeId\":\"2\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44323/reservas",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44323",
+									"path": [
+										"reservas"
+									]
+								},
+								"description": "Datos del turista null"
+							},
+							"response": []
+						},
+						{
+							"name": "POST Reserva CursoAlternativo-3",
+							"protocolProfileBehavior": {
+								"strictSSL": false
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Datos\":{\"Nombre\":\"Juan\",\"Apellido\":\"Perez\",\"Mail\":\"Nose\"},\r\n    \"Filtro\":\r\n    {\r\n        \"CantAdultos\":\"2\",\r\n        \"CantNinios\":\"1\",\r\n        \"CantBebes\":\"2\",\r\n        \"CheckIn\":\"2020,10,9\",\r\n        \"CheckOut\":\"2020,10,10\"\r\n    },\r\n    \"HospedajeId\":\"19\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44323/reservas",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44323",
+									"path": [
+										"reservas"
+									]
+								},
+								"description": "Hospedaje no existe"
+							},
+							"response": []
+						},
+						{
+							"name": "POST Reserva CursoAlternativo-4",
+							"protocolProfileBehavior": {
+								"strictSSL": false
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Datos\":{\"Nombre\":\"Juan\",\"Apellido\":\"Perez\",\"Mail\":\"Nose\"},\r\n    \"Filtro\":\r\n    {\r\n        \"CantAdultos\":\"2\",\r\n        \"CantNinios\":\"1\",\r\n        \"CantBebes\":\"2\",\r\n        \"CheckIn\":\"2020,10,9\",\r\n        \"CheckOut\":\"2020,10,10\"\r\n    },\r\n    \"HospedajeId\":null\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:44323/reservas",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "44323",
+									"path": [
+										"reservas"
+									]
+								},
+								"description": "HospedajeId = null"
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "GETALL CursoNormal",
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44323/reservas",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44323",
+							"path": [
+								"reservas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET CursoNormal",
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44323/reservas/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44323",
+							"path": [
+								"reservas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Estado CursoNormal",
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44323/reservas/1/estado",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44323",
+							"path": [
+								"reservas",
+								"1",
+								"estado"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE CursoNormal",
+					"protocolProfileBehavior": {
+						"strictSSL": false
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44323/reservas/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44323",
+							"path": [
+								"reservas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"variable": [
+		{
+			"id": "b59d7a44-1d5b-46a6-a967-3e21ef8e5865",
+			"key": "puntoId",
+			"value": "8"
+		}
+	],
+	"protocolProfileBehavior": {}
+}

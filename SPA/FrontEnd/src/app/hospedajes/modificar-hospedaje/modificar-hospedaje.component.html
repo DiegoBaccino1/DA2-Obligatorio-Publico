@@ -1,0 +1,24 @@
+<div class="Container">
+    <div class="Titulo">
+        Modificando: {{hospedaje.nombreHospedaje}}
+    </div>
+    <div class="Inputs">
+        <div class="TextInputs">
+            <input [(ngModel)]="nuevoNombre" type="text" value="{{hospedaje.nombreHospedaje}}" 
+            placeholder="{{hospedaje.nombreHospedaje}}" required="true">
+            <input [(ngModel)]="nuevaDesc" type="text" value="{{hospedaje.descripcion}}" 
+            placeholder="{{hospedaje.descripcion}}" required="true">
+            <input [(ngModel)]="nuevaDir" type="text" value="{{hospedaje.direccion}}"
+            placeholder="{{hospedaje.direccion}}"  required="true">
+        </div>
+        <div class="NumberInputs">
+            <input [(ngModel)]="nuevaCapacidad" type="number" value="{{hospedaje.capacidad}}"
+            placeholder="{{hospedaje.capacidad}}" required="true" min="0">
+            <input [(ngModel)]="nuevaCantEstrellas" type="number" value="{{hospedaje.cantidadEstrellas}}" 
+            placeholder="{{hospedaje.cantidadEstrellas}}" required="true" min="0">
+            <input [(ngModel)]="nuevoPrecio" type="number" value="{{hospedaje.precioPorNoche}}"
+            placeholder="{{hospedaje.precioPorNoche}}" required="true" min="0">
+        </div>
+        <input class="BtnModificar" type="button" value="Modificar" (click)="modificar()">
+    </div>
+</div>

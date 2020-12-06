@@ -1,0 +1,24 @@
+<div class="Container">
+    <div class="Header">
+        <h1>Reservas</h1>
+    </div>
+<table class="Table">
+    <tr>
+        <th>Id</th>
+        <th>Estado</th>
+        <th>Hospedaje</th>
+    </tr>        
+    <tr *ngFor="let reserva of reservas">
+        <td class="element-Name">{{reserva.id}}</td>
+        <td class="element-Name">{{reserva.estado}}</td>
+        <td class="element-Name">{{reserva.hospedaje.nombreHospedaje}}</td>
+        <td>
+            <input class="Btn" type="button" name="btnGet" value="Detalles" (click)="obtenerPorId(reserva.id)">
+            <input class="Btn" type="button" name="btnPut" value="Modificar" (click)="modificar(reserva.id)">
+            <input class="Btn" type="button" name="btnDelete" value="Borrar" (click)="borrar(reserva.id)">
+            <input class="Btn" type="button" name="btnResenia" value="AgregarReseña" (click)="resenia(reserva.id)">
+        </td>
+    </tr>
+    <input class="BtnStatic" type="button" name="btnReporte" value="GenerarReporte" (click)="reporte()">
+</table>
+</div>

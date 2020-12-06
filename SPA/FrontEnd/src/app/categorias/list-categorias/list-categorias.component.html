@@ -1,0 +1,16 @@
+<div class="Container">
+    <div class="Header">
+        <h1>Categorias</h1>
+    </div>
+<table class="Table">        
+    <tr *ngFor="let categoria of categorias">
+        <td class="element-Name">{{categoria.nombre}}</td>
+        <td>
+            <input class="Btn" type="button" name="btnGet" value="Detalles" (click)="obtenerPorId(categoria.id)">
+            <input class="Btn" type="button" name="btnPut" value="Modificar" (click)="modificar(categoria.id)">
+            <input class="Btn" type="button" name="btnDelete" value="Borrar" (click)="borrar(categoria.id)">
+        </td>
+    </tr>
+    <input class="BtnStatic" type="button" name="btnPost" value="Crear" (click)="crear()">
+</table>
+</div>

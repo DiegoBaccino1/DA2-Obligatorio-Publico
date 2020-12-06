@@ -1,0 +1,21 @@
+<div class="Container">
+    <h1>Reporte</h1>
+    <div class="Fechas">
+        <input [(ngModel)]="inicio" type="date" name="Inicio" id="Inicio">
+        <input [(ngModel)]="fin" type="date" name="Fin" id="Fin">
+        
+        <select name="Puntos" id="Puntos" (change)="changePunto($event.target.value)">
+            <option *ngFor="let punto of puntos" value="{{punto.id}}">{{punto.nombre}}</option>
+        </select>
+        <div>
+            <input type="button" value="Filtrar" (click)="generarReporte()">
+        </div>
+    </div>
+    <div class="Reporte">
+        <ul>
+            <li *ngFor="let rep of reporte">
+                {{rep.nombreHospedaje}}(Cantidad de reservas: {{rep.cantReservas}} )
+            </li>
+        </ul>
+    </div>
+</div>

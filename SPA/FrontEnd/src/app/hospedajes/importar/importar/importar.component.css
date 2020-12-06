@@ -1,0 +1,9 @@
+.Container{
+    text-align: center;
+    margin-left: 10%;
+}
+label{
+    display: block;
+    font-size: 20px;
+    font-weight: 600;
+}

@@ -1,0 +1,35 @@
+<div class="Container">
+    <div class="Header">
+        <h1>Hospedajes</h1>
+    </div>
+    <table class="Table">
+        <tr>
+            <th>Nombre</th>
+            <th>Estrellas</th>
+            <th>Disponibilidad</th>
+        </tr>        
+        <tr *ngFor = "let hospedaje of hospedajes">
+            <td class="element-Name">{{hospedaje.nombreHospedaje}}</td>
+            <td class="element-Name">{{hospedaje.cantidadEstrellas}}</td>
+            <ng-container *ngIf="hospedaje.ocupado then ocupado;else libre"></ng-container>
+            <ng-template #ocupado>
+                <td class="element-Name">Ocupado</td>
+            </ng-template>
+            <ng-template #libre>
+                <td class="element-Name">Disponible</td>
+            </ng-template>            
+            <td>
+                <input class="Btn" type="button" name="btnGet" value="Detalles" (click)="obtenerPorId(hospedaje.id)">
+                <input class="Btn" type="button" name="btnPut" value="Modificar" (click)="modificar(hospedaje.id)">
+                <input class="Btn" type="button" name="btnDelete" value="Borrar" (click)="borrar(hospedaje.id)">
+                <input class="Btn" type="button" name="btnDelete" value="Asociar" (click)="asociar(hospedaje.id)">
+                <input class="Btn" type="button" name="btnDelete" value="Cambiar Capacidad" (click)="cambiarCapacidad(hospedaje.id)">
+            </td>
+        </tr>
+        <input class="BtnStatic" type="button" name="btnDeletePunto" value="BorrarSegunPunto" (click)="borrarSegunPunto()">            
+        <input class="BtnStatic" type="button" name="btnPost" value="Crear" (click)="crear()">
+        <input class="BtnStatic" type="button" name="btnPost" value="Filtrar" (click)="filtrar()">
+        <input class="BtnStatic" type="button" name="btnPost" value="Importadores" (click)="importadores()">
+    </table>
+    
+</div>

@@ -1,0 +1,20 @@
+<div class="Container">
+   <table class="Table">
+       <tr>
+           <th>Nombre</th>
+           <th>Acciones</th>
+       </tr>
+       <tr *ngFor= "let region of regiones" >
+           <td class="element-Name">{{region.nombre}}</td>
+           <td>
+               <input class="Btn" type="button" name="btnGet" value="Detalles" (click)="obtenerPorId(region.id)">
+               <input class="Btn" type="button" name="btnPut" value="Modificar" (click)="modificar(region.id)">
+               <input class="Btn" type="button" name="btnPutPunto" value="Asociar punto" (click)="asociarPunto(region.id)">
+               <input class="Btn" type="button" name="btnDelete" value="Borrar" (click)="borrar(region.id)">
+            </td>
+       </tr>
+   </table>
+   <div>
+    <input class="BtnCrear" type="button" name="btnPost" value="Crear" (click)="crear()">
+   </div>
+</div>

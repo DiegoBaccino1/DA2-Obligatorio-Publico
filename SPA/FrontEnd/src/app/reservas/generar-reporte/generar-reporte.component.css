@@ -1,0 +1,12 @@
+.Container{
+    width: 80%;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.Reporte{
+    margin-top: 2%;
+    padding:20px;
+    font-size: 18px;
+    font-weight: 600;
+}

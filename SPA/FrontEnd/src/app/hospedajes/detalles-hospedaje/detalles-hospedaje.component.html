@@ -1,0 +1,33 @@
+<div class="Container">
+    <div class="Titulo">
+        <h1>{{hospedaje.nombreHospedaje}}</h1>
+    </div>
+    <div class="Descripcion">
+        {{hospedaje.descripcion}}
+        <br>
+        <ng-container *ngIf="hospedaje.ocupado then ocupado;else libre"></ng-container>
+            <ng-template #ocupado>
+                Estado: Ocupado
+            </ng-template>
+            <ng-template #libre>
+                 Estado: Disponible
+            </ng-template>            
+    </div>
+    <div class="DetallesNumericos">
+        <h3>Numeros:</h3>
+        <div>
+            Capacidad: {{hospedaje.capacidad}}
+        </div>
+        <div>
+            Precio $: {{hospedaje.precioPorNoche}}
+            <br>
+            Precio Total $: {{hospedaje.precioTotalPeriodo}}
+        </div>
+        <div>
+            Estrellas: {{hospedaje.cantidadEstrellas}}
+        </div>
+        <div>
+            Puntaje: {{hospedaje.puntaje}}
+        </div>
+    </div>
+</div>

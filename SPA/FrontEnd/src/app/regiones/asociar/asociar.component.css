@@ -1,0 +1,36 @@
+.Container{
+    letter-spacing: 2px;
+    min-width: 100px;
+    max-width: 500px;
+    width: 100%;
+    margin-left: 30%;
+    margin-right: 15%;
+    margin-top: 5%;
+    border:5px solid;
+    border-radius: 5px;
+    text-align: center;
+    background-color: rgba(128, 128, 128, 0.555);
+}
+.Label{
+    font-weight: 600;
+}
+li{
+    list-style: none;
+    margin-bottom: 1%;
+    padding:3px;
+}
+select{
+    margin-left:10px ;
+    margin-right:10px ;
+    padding: 3px;
+    padding-right: 5px;
+}
+.NombreRegion{
+    font-size: large;
+    font-weight: bold;
+    border-bottom: 4px green solid;
+}
+.TodosPuntos{
+    padding-top: 13px;
+    margin-top: 2%;
+}

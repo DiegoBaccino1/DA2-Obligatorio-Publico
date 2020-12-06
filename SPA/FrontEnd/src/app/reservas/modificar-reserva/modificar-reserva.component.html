@@ -1,0 +1,20 @@
+<div class="Container">
+    <div class="DatosReserva">
+        <h1>
+        {{reserva.id}}-
+        {{reserva.hospedaje.nombreHospedaje}}
+        </h1>
+    </div>
+    <div class="Estado">
+        <div class="NuevoEstado">
+            <label for="EstadoReserva">Ingrese el nuevo estado: </label>
+            <input [(ngModel)]="nuevoEstado" type="text" name="EstadoReserva" id="EstadoReserva" placeholder="{{reserva.estado}}">
+        </div>
+        <div class="NuevaDesc">
+            <label for="Desc">Ingrese la nueva Descripcion: </label>
+            <textarea [(ngModel)]="nuevaDescripcion" name="Desc" id="Desc" cols="30" rows="10" placeholder="{{reserva.descripcion}}">
+            </textarea>    
+        </div>
+        <input class="Btn" type="button" value="Cambiar Estado" (click)="cambiarEstado()">
+    </div>
+</div>

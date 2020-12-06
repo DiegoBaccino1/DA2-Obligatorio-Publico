@@ -1,0 +1,40 @@
+.Container{
+    width: 70%;
+    margin-left: 10%;
+    margin-top: 2%;
+    text-align: center;
+    background-color: rgba(64, 224, 208, 0.726);
+}
+.Nombre{
+    font-size: 3em;
+    font-weight: 700;
+    font-style: italic;
+    text-decoration: underline;
+}
+.DescripcionYFechas{
+    margin-top: 2%;
+    font-weight: 600;
+    font-size: 18px;
+}
+.DatosTurista{
+}
+.DatosTurista h3{
+    text-decoration: underline;
+}
+.Estado{
+    float: left;
+    border: 3px solid rgba(255, 0, 0, 0.767);
+    background-color: rgba(0, 0, 255, 0.767);
+    color: rgba(255, 255, 255, 0.856);
+    font-weight: 600;
+    text-decoration: underline;
+    font-style: italic;
+}
+.Hospedaje{
+    float: right;
+    border: 3px solid rgba(0, 0, 255, 0.767);
+    background-color: rgba(255, 0, 0, 0.767);
+    font-weight: 600;
+    text-decoration: underline;
+    font-style: italic;
+}

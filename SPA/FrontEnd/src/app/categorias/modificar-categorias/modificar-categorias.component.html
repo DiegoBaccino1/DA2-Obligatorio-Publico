@@ -1,0 +1,11 @@
+<div class="Container">
+    <div class="Titulo">
+        Modificando: {{categoria.nombre}}
+    </div>
+    <div class="NuevosCampos">
+        <input [(ngModel)]="nuevoNombre" type="text" placeholder="Nuevo nombre" name="nombre" required="true">
+    </div>
+    <div>
+        <input class="Btn" type="button" value="Modificar" (click)="modificar()">
+    </div>
+</div>

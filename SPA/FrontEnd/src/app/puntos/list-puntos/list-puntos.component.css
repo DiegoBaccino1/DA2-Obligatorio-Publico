@@ -1,0 +1,50 @@
+.Container{
+    width: 100%;
+
+}
+td{
+    border: 1px solid;
+    padding: 7px;
+    background-color: khaki;
+    text-align: center;
+}
+.Btn{
+    padding-left: 13px;
+    padding-right: 13px;
+    margin-top: 5px;
+    display: block;
+    font-weight: lighter;
+    font-size: 16px;
+    background-color: white;
+}
+.element-Name{
+    font-weight: bold;
+    font-size: 16px;
+    font-style: italic;
+}
+.Header{
+    min-width: 100px;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    border-bottom:3px solid yellowgreen;
+    margin-left: 20%;
+}
+.Table{
+    margin-top: 2%;
+    margin-left: 25%;
+}
+.BtnStatic{
+    display: block;
+    width: 100%;
+    margin-left: 70%;
+    margin-top: 10%;
+    padding:20px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 17px;
+    border: 2px solid;
+    border-radius: 4px;
+    border-top:none ;
+    border-bottom:none ;   
+}

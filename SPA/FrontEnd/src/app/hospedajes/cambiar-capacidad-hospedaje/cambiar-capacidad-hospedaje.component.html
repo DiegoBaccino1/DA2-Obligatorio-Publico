@@ -1,0 +1,9 @@
+<div class="Container">
+    <div class="Nombre">
+        {{hospedaje.nombreHospedaje}}
+    </div>
+    <div class="NuevaCapacidad">
+        <input [(ngModel)]="nuevaCapacidad" class="Btn" type="number" placeholder="Nueva capacidad" min="0">
+        <input class="Btn" type="button" value="Cambiar" (click)="cambiarCapacidad()">
+    </div>
+</div>

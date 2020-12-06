@@ -1,0 +1,32 @@
+<div class="Container">
+    <div class="DatosTitulo">
+        <h1>Datos de: {{punto.nombre}}</h1>
+    </div>
+    <div>
+        <div class="Datos">
+            <input class="InputDatos" [(ngModel)]="nuevoNombre" type="text" placeholder="Nuevo nombre" required='true'>
+            <input class="InputDatos" [(ngModel)]="nuevaDescripcion" type="text" placeholder="Nueva descripcion" required='true'>
+            <input class="BtnModificar" type="button" value="Modificar" (click)="modificar()">
+        </div>
+        
+        <div class="ModificarCategorias">
+            <div>
+                <label for="TodasCategorias">Todas las Categorias</label>
+                <select class="TodasCategorias" name="TodasCategorias" id="TodasCategorias" (change)="change($event.target.value)">
+                    <option *ngFor="let categoria of todasCategorias"
+                     value="{{categoria.id}}">{{categoria.nombre}}</option>
+                </select>    
+            </div>
+            <div>
+                <input class="AgregarBtn" type="button" value="" (click)="agregarCategoria(punto.id)">
+            </div>
+            <div>
+                <label for="PuntoCategorias">Categorias del punto</label>
+                <select class="PuntoCategorias" name="PuntoCategorias" id="PuntoCategorias" >
+                    <option *ngFor="let categoriaDePunto of puntoCategorias"
+                     value="{{categoriaDePunto.categoriaId}}">{{categoriaDePunto.categoria.nombre}}</option>
+                </select>    
+            </div>
+        </div>
+    </div>
+</div>

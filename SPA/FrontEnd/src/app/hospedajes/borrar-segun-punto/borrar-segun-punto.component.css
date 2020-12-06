@@ -1,0 +1,33 @@
+.Container{
+    text-align: center;
+    margin-top: 2%;
+    margin-left: 15%;
+    background-color: rgba(0, 255, 0, 0.308);
+}
+.Titulo{
+    font-size: large;
+    font-size: 3em;
+    text-decoration: underline;
+    margin-bottom: 5%;
+}
+.TodosPuntos label{
+    font-weight: 600;
+    font-size: large;
+    display: block;
+    margin-bottom: 2%;
+}
+.TodosPuntos select{
+    width: 50%;
+    border-radius: 5px;
+    background: none;
+    border:3px solid;
+    font-weight: 600;
+}
+.Btn{
+    margin-top:2% ;
+    margin-bottom: 2%;
+    width: 30%;
+    font-weight: 600;
+    font-style: italic;
+    background:none;
+}

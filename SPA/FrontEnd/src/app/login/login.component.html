@@ -1,0 +1,12 @@
+<div class="LoginBox">
+    <h1>Login</h1>
+    <div class="InputBox">
+        <img class="Icon" src="../../assets/EmailIcon.jpg">
+        <input [(ngModel)]="email" type="text" placeholder="Ingrese su email" name="" value="" required="true">
+    </div>
+    <div class="InputBox">
+        <img class="Icon" src="../../assets/PassIcon.jpg">
+        <input [(ngModel)]="contrasenia" type="password" placeholder="Ingrese su contraseña" name="" value="" required="true">
+    </div>
+    <input class="Btn" type="button" name="btnSign" value="Ingresar" (click)="login()">
+</div>

@@ -1,0 +1,33 @@
+input{
+    display: block;
+    border: none;
+    border-bottom: 1px solid;
+    margin-top: 10px;
+}
+
+.Container{
+    margin-left: 25%;
+    padding-left: 10%;
+}
+.Titulo{
+    margin-bottom: 5%;
+    font-size: large;
+    font-weight: 700;
+    text-decoration: underline;
+    margin-left: 50px;
+}
+
+.BtnCrear{
+    width: 25%;
+    padding-right: 5%;
+    margin-right: 5%;
+    padding-left: 5%;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+.NumberInputs{
+    margin-top: 30px;
+    font-size: 18px;
+    font-weight: 600;
+}

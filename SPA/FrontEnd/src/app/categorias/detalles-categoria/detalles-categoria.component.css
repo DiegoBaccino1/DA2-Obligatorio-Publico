@@ -1,0 +1,12 @@
+.Container{
+    width: 70%;
+    margin-left: 10%;
+    margin-top: 2%;
+    text-align: center;
+}
+.Nombre{
+    font-size: 3em;
+    font-weight: 700;
+    font-style: italic;
+    text-decoration: underline;
+}

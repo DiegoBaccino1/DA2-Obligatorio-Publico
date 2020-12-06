@@ -1,0 +1,16 @@
+<div class="Container">
+    <div class="Titulo">
+        Nuevo hospedaje
+    </div>
+    <div class="TextInputs">
+        <input [(ngModel)]="nombre" type="text" value="" placeholder="Nombre de hospedaje" required="true">
+        <input [(ngModel)]="desc" type="text" value="" placeholder="Descripcion de hospedaje" required="true">
+        <input [(ngModel)]="dir" type="text" value="" placeholder="Direccion de hospedaje" required="true">
+    </div>
+    <div class="NumberInputs">
+        <input [(ngModel)]="capacidad" type="number" value="" placeholder="Capacidad de hospedaje" required="true" min="0">
+        <input [(ngModel)]="estrellas" type="number" value="" placeholder="Estrellas de hospedaje" required="true" min="0">
+        <input [(ngModel)]="precio" type="number" value="" placeholder="Precio por Noche en $" required="true" min="0">
+    </div>
+    <input class="BtnCrear" type="button" value="Crear" (click)="crear()">
+</div>

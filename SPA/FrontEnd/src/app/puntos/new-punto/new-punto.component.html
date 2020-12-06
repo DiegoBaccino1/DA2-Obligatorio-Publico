@@ -1,0 +1,18 @@
+<div class="Container">
+    <div class="Titulo">
+        Nuevo Punto
+    </div>
+    <div class="Textbox">
+        <div>Nombre:</div> 
+        <input [(ngModel)]="nombrePunto" type="text" placeholder="Ingrese el nombre" required="true">
+    </div>
+    <div class="Textbox">
+        Descripcion:
+        <textarea [(ngModel)]="descripcionPunto" id="txtDesc" cols="30" rows="10" 
+            placeholder="Ingrese la descripcion" required="true">
+        </textarea>
+    </div>
+    <div>
+        <input type="button" name="btnAgregar" value="Agregar" class="Btn" (click)="crear()">
+    </div>
+</div>

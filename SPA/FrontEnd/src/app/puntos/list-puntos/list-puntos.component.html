@@ -1,0 +1,19 @@
+<div class="Container">
+        <div class="Header">
+            <h1>Puntos</h1>
+        </div>
+
+    <table class="Table">        
+        <tr *ngFor="let punto of puntos">
+            <td class="element-Name">{{punto.nombre}}</td>
+            <td class="element-Name">{{punto.id}}</td>
+            <td>
+                <input class="Btn" type="button" name="btnGet" value="Detalles" (click)="obtenerPorId(punto.id)">
+                <input class="Btn" type="button" name="btnPut" value="Modificar" (click)="modificar(punto.id)">
+                <input class="Btn" type="button" name="btnDelete" value="Borrar" (click)="borrar(punto.id)">
+            </td>
+        </tr>
+        <input class="BtnStatic" type="button" name="btnPost" value="Crear" (click)="crear()">
+        <input class="BtnStatic" type="button" name="btnFiltro" value="Filtrar" (click)="filtrar()">
+    </table>
+</div>

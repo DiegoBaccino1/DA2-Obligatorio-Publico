@@ -1,0 +1,16 @@
+<div class="Container">
+    <div class="PuntosActuales">
+        <span class="NombreHospedaje">
+            Hospedaje: {{hospedaje.nombreHospedaje}}
+        </span>
+    </div>
+    <div class="Puntos">
+        <label for="puntos">Puntos:</label>
+        <select name="puntos" id="puntos" (change)="change($event.target.value)">
+        <option *ngFor="let punto of puntos" value={{punto.id}}>
+            {{punto.nombre}}
+        </option>
+        </select>
+        <input type="button" value="Asociar" (click)="asociar()">
+    </div>
+</div>

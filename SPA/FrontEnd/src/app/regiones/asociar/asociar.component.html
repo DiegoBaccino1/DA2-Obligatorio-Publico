@@ -1,0 +1,22 @@
+<div class="Container">
+    <div class="PuntosActuales">
+        <span class="NombreRegion">
+            Region: {{region.nombre}}
+        </span>
+        <ul >
+            <label class="Label" for="regionPuntos"> Puntos actuales:</label>
+            <li class="punto" *ngFor="let punto of puntosRegion">
+                {{punto.Nombre}}
+            </li>
+        </ul>
+    </div>
+    <div class="TodosPuntos">
+        <label for="puntos">Puntos:</label>
+        <select name="puntos" id="puntos" (change)="change($event.target.value)">
+        <option *ngFor="let punto of todosPuntos" value={{punto.id}}>
+            {{punto.nombre}}
+        </option>
+        </select>
+        <input type="button" value="Asociar" (click)="asociar()">
+    </div>
+</div>

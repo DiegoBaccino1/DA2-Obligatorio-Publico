@@ -1,0 +1,30 @@
+.Container{
+    width: 80%;
+    text-align: center;
+    margin-left: 10%;
+    border:5px solid rgba(0, 0, 0, 0.815);
+    border-radius: 5px;
+}
+.Titulo{
+    font-size: 2em;
+    font-weight: 700;
+    text-decoration: underline;   
+}
+.NuevosCampos{
+    margin-top: 5px;
+    padding-top: 10px;
+    margin-bottom: 5px;
+    padding-bottom: 10px;
+}
+.NuevosCampos input{
+    border: none;
+    border-bottom: 2px solid;
+    background: none;
+}
+.Btn{
+    width: 30%;
+    border-radius: 5px;
+    background-color: rgba(65, 105, 225, 0.61);
+    font-weight: 600;
+    font-size: 16px;
+}
